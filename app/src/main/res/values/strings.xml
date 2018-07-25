@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Sagamu Tour</string>
+
+    <!-- Category name for hotels -->
+    <string name="category_hotels">Hotels</string>
+
+    <!-- Category name for banks -->
+    <string name="category_banks">Banks</string>
+
+    <!-- Category name for offices -->
+    <string name="category_offices">Others</string>
+
+    <!-- Category name for hospitals -->
+    <string name="category_hospitals">Hospitals</string>
+
+    <!-- Category name for shopping stores -->
+    <string name="category_shopping_stores">Shopping Stores</string>
+
+    <!-- Category name for restaurants -->
+    <string name="category_restaurants">Restaurants</string>
+
+    <!-- Category name for markets -->
+    <string name="category_markets">Markets</string>
+
+    <!-- Category name for filing stations -->
+    <string name="category_filing_stations">Filing Stations</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorContent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/facility_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="24dp"
+            android:text="facility_name"
+            android:textAllCaps="true"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/facility_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_place" />
+
+            <TextView
+                android:id="@+id/facility_item_adress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="facility_address"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/price_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_attach_money" />
+
+            <TextView
+                android:id="@+id/facility_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="facility_price"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/opening_hours_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_access_time" />
+
+            <TextView
+                android:id="@+id/facility_item_opening_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="facility_opening_hours"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/facility_item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="facility_description"
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/available_amenities_icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_wifi" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_restaurant" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_pool" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_free_breakfast" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_local_bar" />
+
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/facility_item_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="facility_contact"
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/gallery_scroll_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/gallery_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/gallery_one"
+                    android:layout_width="@dimen/list_item_height"
+                    android:layout_height="@dimen/list_item_height"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/gallery_two"
+                    android:layout_width="@dimen/list_item_height"
+                    android:layout_height="@dimen/list_item_height"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/gallery_three"
+                    android:layout_width="@dimen/list_item_height"
+                    android:layout_height="@dimen/list_item_height"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/gallery_four"
+                    android:layout_width="@dimen/list_item_height"
+                    android:layout_height="@dimen/list_item_height"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:scaleType="centerCrop" />
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

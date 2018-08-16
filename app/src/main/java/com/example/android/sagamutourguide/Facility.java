@@ -1,22 +1,24 @@
 package com.example.android.sagamutourguide;
 
+import java.util.Objects;
+
 /**
  * Created by Oluwadara on 22-Mar-18.
  */
 
-public class Facility {
+class Facility {
 
     //Name of facility
-    private String mFacilityName;
+    private final String mFacilityName;
 
     //Address of facility
-    private String mFacilityAddress;
+    private final String mFacilityAddress;
 
     //Description of facility
-    private String mFacilityDescription;
+    private final String mFacilityDescription;
 
     //Background image of facility
-    private int mFacilityImage;
+    private final int mFacilityImage;
 
     //Gallery of facility
     private int mGalleryOne, mGalleryTwo, mGalleryThree, mGalleryFour;
@@ -131,33 +133,29 @@ public class Facility {
 
     /**
      * Returns whether or not there is a price for this facility
-     * @return
      **/
     public boolean hasPrice() {
-        return mFacilityPrice != NO_PRICE_REQUIRED;
+        return !Objects.equals(mFacilityPrice, NO_PRICE_REQUIRED);
     }
 
     /**
      * Returns whether or not there is a contact for this facility
-     * @return
      **/
     public boolean hasContact() {
-        return mFacilityContact != NO_CONTACT_REQUIRED;
+        return !Objects.equals(mFacilityContact, NO_CONTACT_REQUIRED);
     }
 
     /**
      * Returns whether or not there is opening hours for this facility
-     * @return
      **/
     public boolean hasOpeningHours() {
-        return mFacilityOpeningHours != NO_HOURS_REQUIRED;
+        return !Objects.equals(mFacilityOpeningHours, NO_HOURS_REQUIRED);
     }
 
     /**
      * Returns whether or not there are available amenities for this facility
-     * @return
      **/
     public boolean hasAvailableAmenities() {
-        return mAvailableAmenities != NO_AMENITIES_REQUIRED;
+        return !Objects.equals(mAvailableAmenities, NO_AMENITIES_REQUIRED);
     }
 }

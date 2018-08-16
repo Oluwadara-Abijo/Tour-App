@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by Oluwadara on 28-Mar-18.
  */
 
-public class MarketsPagerAdapter extends FragmentPagerAdapter {
+class MarketsPagerAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[] {"Awolowo", "Sabo", "Falawo"};
+    private final String[] tabTitles = new String[] {"Awolowo", "Sabo", "Falawo"};
 
     public MarketsPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -18,12 +18,13 @@ public class MarketsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new AwolowoMarketFragment();
-        } else if (position == 1){
-            return new SaboMarketFragment();
-        } else {
-            return new FalawoMarketFragment();
+        switch (position) {
+            case 0:
+                return new AwolowoMarketFragment();
+            case 1:
+                return new SaboMarketFragment();
+            default:
+                return new FalawoMarketFragment();
         }
     }
 

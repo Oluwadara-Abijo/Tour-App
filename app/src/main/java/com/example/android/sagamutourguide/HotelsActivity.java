@@ -13,10 +13,10 @@ public class HotelsActivity extends AppCompatActivity {
         setContentView(R.layout.facility_activity);
 
         // Find the view pager that will allow the user to swipe between fragments
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        ViewPager viewPager = findViewById(R.id.viewpager);
 
         // Give the TabLayout the ViewPager
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
 
         // Create an adapter that knows which fragment should be shown on each page

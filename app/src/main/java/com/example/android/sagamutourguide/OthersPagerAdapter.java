@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by Oluwadara on 29-Mar-18.
  */
 
-public class OthersPagerAdapter extends FragmentPagerAdapter {
+class OthersPagerAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[] {"Stadium", "High Court", "Post Office"};
+    private final String[] tabTitles = new String[] {"Stadium", "High Court", "Post Office"};
 
     public OthersPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -18,12 +18,13 @@ public class OthersPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new StadiumFragment();
-        } else if (position == 1){
-            return new HighCourtFragment();
-        } else {
-            return new PostOfficeFragment();
+        switch (position) {
+            case 0:
+                return new StadiumFragment();
+            case 1:
+                return new HighCourtFragment();
+            default:
+                return new PostOfficeFragment();
         }
     }
 

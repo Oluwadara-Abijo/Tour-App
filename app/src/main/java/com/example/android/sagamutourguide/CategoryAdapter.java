@@ -3,7 +3,6 @@ package com.example.android.sagamutourguide;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
  * Created by Oluwadara on 23-Mar-18.
  */
 
-public class CategoryAdapter extends ArrayAdapter<Category> {
+class CategoryAdapter extends ArrayAdapter<Category> {
 
 
     //Constructor
@@ -38,20 +37,21 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
         // Get the {@link Facility} object located at this position in the list
         Category currentWord = getItem(position);
 
-        // Get the {@link Facility} object located at this position in the list
-        Category currentImage = getItem(position);
-
         // Find the TextView in the list_item.xml layout with the ID category name text view
         TextView categoryName = listItemView.findViewById(R.id.category_text_view);
         // Get the category name from the current Word object and
         // set this text on the category name TextView
-        categoryName.setText(currentWord.getCategoryName());
+        if (currentWord != null) {
+            categoryName.setText(currentWord.getCategoryName());
+        }
 
         // Find the TextView in the list_item.xml layout with the ID category image text view
         ImageView categoryImage = listItemView.findViewById(R.id.category_image_text_view);
         // Get the facility address from the current Word object and
         // set this text on the category image TextView
-        categoryImage.setImageResource(currentWord.getImageForCategory());
+        if (currentWord != null) {
+            categoryImage.setImageResource(currentWord.getImageForCategory());
+        }
 
         return listItemView;
 

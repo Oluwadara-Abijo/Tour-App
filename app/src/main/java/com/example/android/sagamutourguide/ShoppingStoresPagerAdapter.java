@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by Oluwadara on 28-Mar-18.
  */
 
-public class ShoppingStoresPagerAdapter extends FragmentPagerAdapter {
+class ShoppingStoresPagerAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[] {"Modu", "Citizens", "Somag"};
+    private final String[] tabTitles = new String[] {"Modu", "Citizens", "Somag"};
 
     public ShoppingStoresPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -18,12 +18,13 @@ public class ShoppingStoresPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new ModuFragment();
-        } else if (position == 1){
-            return new CitiStoreFragment();
-        } else {
-            return new SomagFragment();
+        switch (position) {
+            case 0:
+                return new ModuFragment();
+            case 1:
+                return new CitiStoreFragment();
+            default:
+                return new SomagFragment();
         }
     }
 

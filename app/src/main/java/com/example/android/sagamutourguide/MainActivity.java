@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         categories.add(new Category("Restaurants", R.drawable.restaurant));
         categories.add(new Category("Shopping Stores", R.drawable.shopping_store));
         categories.add(new Category("Markets", R.drawable.market));
-        categories.add(new Category("Offices", R.drawable.office));
+        categories.add(new Category("Others", R.drawable.office));
 
 
         // Create an {@link FacilityAdapter}, whose data source is a list of {@link Facility}s. The

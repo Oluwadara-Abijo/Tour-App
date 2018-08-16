@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by Oluwadara on 28-Mar-18.
  */
 
-public class RestaurantsPagerAdapter extends FragmentPagerAdapter {
+class RestaurantsPagerAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[] {"Right Options", "Meeting Point", "Mr. Biggs", "Olass Cafe"};
+    private final String[] tabTitles = new String[] {"Right Options", "Meeting Point", "Mr. Biggs", "Olass Cafe"};
 
     public RestaurantsPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -18,14 +18,15 @@ public class RestaurantsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new RightOptionsFragment();
-        } else if (position == 1){
-            return new MeetingPointFragment();
-        } else if (position == 2){
-            return new MrBiggsFragment();
-        } else {
-            return new OlassCafeFragment();
+        switch (position) {
+            case 0:
+                return new RightOptionsFragment();
+            case 1:
+                return new MeetingPointFragment();
+            case 2:
+                return new MrBiggsFragment();
+            default:
+                return new OlassCafeFragment();
         }
     }
 

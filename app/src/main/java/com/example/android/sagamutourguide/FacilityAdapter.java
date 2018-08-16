@@ -3,12 +3,10 @@ package com.example.android.sagamutourguide;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,7 +17,7 @@ import java.util.ArrayList;
  * Created by Oluwadara on 22-Mar-18.
  */
 
-public class FacilityAdapter extends ArrayAdapter<Facility> {
+class FacilityAdapter extends ArrayAdapter<Facility> {
 
 
     //Constructor
@@ -78,9 +76,9 @@ public class FacilityAdapter extends ArrayAdapter<Facility> {
         galleryFour.setImageResource(currentImage.getGallery_four());
 
 
-        /**
-         * Displays or hides facility price
-         **/
+        /*
+          Displays or hides facility price
+         */
 
         // Find the LinearLayout in the list_item.xml layout with the ID price_container
         LinearLayout priceContainer = listItemView.findViewById(R.id.price_container);
@@ -100,9 +98,9 @@ public class FacilityAdapter extends ArrayAdapter<Facility> {
             priceContainer.setVisibility(View.GONE);
         }
 
-        /**
-         * Displays or hides facility contact
-         **/
+        /*
+          Displays or hides facility contact
+         */
 
         // Find the TextView in the list_item.xml layout with the ID facility_contact
         TextView facilityContact = listItemView.findViewById(R.id.facility_item_contact);
@@ -120,9 +118,9 @@ public class FacilityAdapter extends ArrayAdapter<Facility> {
         }
 
 
-        /**
-         * Displays or hides opening hours container
-         **/
+        /*
+          Displays or hides opening hours container
+         */
 
         // Find the LinearLayout in the list_item.xml layout with the ID price_container
         LinearLayout openingHoursContainer = listItemView.findViewById(R.id.opening_hours_container);
@@ -149,9 +147,9 @@ public class FacilityAdapter extends ArrayAdapter<Facility> {
             openingHoursContainer.setVisibility(View.GONE);
         }
 
-        /**
-         * Displays or hides available amenities icons
-         **/
+        /*
+          Displays or hides available amenities icons
+         */
 
         // Find the LinearLayout in the list_item.xml layout with the ID price_container
         LinearLayout availableAmenities = listItemView.findViewById(R.id.available_amenities_icons);

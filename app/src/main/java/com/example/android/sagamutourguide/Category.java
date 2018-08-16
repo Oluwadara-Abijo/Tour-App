@@ -4,13 +4,13 @@ package com.example.android.sagamutourguide;
  * Created by Oluwadara on 23-Mar-18.
  */
 
-public class Category {
+class Category {
 
     //Name of category
-    private String mCategoryName;
+    private final String mCategoryName;
 
     //Background image for category
-    private int mImageForCategory;
+    private final int mImageForCategory;
 
 
     //Define constructor1

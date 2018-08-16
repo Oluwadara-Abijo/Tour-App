@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorContent"
@@ -10,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -19,7 +16,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_margin="24dp"
-            android:text="facility_name"
             android:textAllCaps="true"
             android:textAppearance="@android:style/TextAppearance.Holo.Medium"
             android:textColor="@android:color/black"
@@ -29,7 +25,8 @@
             android:id="@+id/facility_item_image"
             android:layout_width="match_parent"
             android:layout_height="@dimen/list_item_height"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/facility_image" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,14 +38,14 @@
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_place" />
+                android:src="@drawable/ic_place"
+                android:contentDescription="@string/place_icon" />
 
             <TextView
                 android:id="@+id/facility_item_adress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="facility_address"
                 android:textAppearance="@android:style/TextAppearance.Holo.Small"
                 android:textColor="@android:color/black"
                 android:textStyle="bold" />
@@ -66,14 +63,14 @@
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_attach_money" />
+                android:src="@drawable/ic_attach_money"
+                android:contentDescription="@string/money_icon" />
 
             <TextView
                 android:id="@+id/facility_item_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="facility_price"
                 android:textAppearance="@android:style/TextAppearance.Holo.Small"
                 android:textColor="@android:color/black"
                 android:textStyle="bold" />
@@ -91,14 +88,14 @@
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_access_time" />
+                android:src="@drawable/ic_access_time"
+                android:contentDescription="@string/time_icon" />
 
             <TextView
                 android:id="@+id/facility_item_opening_hours"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="facility_opening_hours"
                 android:textAppearance="@android:style/TextAppearance.Holo.Small"
                 android:textColor="@android:color/black"
                 android:textStyle="bold" />
@@ -109,7 +106,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="facility_description"
             android:textAppearance="@android:style/TextAppearance.Holo.Small"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
@@ -127,35 +123,40 @@
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_wifi" />
+                android:src="@drawable/ic_wifi"
+                android:contentDescription="@string/wifi_icon" />
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_restaurant" />
+                android:src="@drawable/ic_restaurant"
+                android:contentDescription="@string/restaurant_icon" />
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_pool" />
+                android:src="@drawable/ic_pool"
+                android:contentDescription="@string/pool_icon" />
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_free_breakfast" />
+                android:src="@drawable/ic_free_breakfast"
+                android:contentDescription="@string/free_breakfast_icon" />
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_local_bar" />
+                android:src="@drawable/ic_local_bar"
+                android:contentDescription="@string/local_bar_icon" />
 
         </LinearLayout>
         
@@ -165,19 +166,16 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:padding="16dp"
-            android:text="facility_contact"
             android:textAppearance="@android:style/TextAppearance.Holo.Small"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
         <HorizontalScrollView
-            android:id="@+id/gallery_scroll_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:id="@+id/gallery_layout"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:orientation="horizontal">
@@ -186,30 +184,33 @@
                     android:id="@+id/gallery_one"
                     android:layout_width="@dimen/list_item_height"
                     android:layout_height="@dimen/list_item_height"
-                    android:layout_marginRight="5dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/facility_gallery"
+                    android:layout_marginEnd="5dp" />
 
                 <ImageView
                     android:id="@+id/gallery_two"
                     android:layout_width="@dimen/list_item_height"
                     android:layout_height="@dimen/list_item_height"
-                    android:layout_marginRight="5dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/facility_gallery"
+                    android:layout_marginEnd="5dp" />
 
                 <ImageView
                     android:id="@+id/gallery_three"
                     android:layout_width="@dimen/list_item_height"
                     android:layout_height="@dimen/list_item_height"
-                    android:layout_marginRight="5dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/facility_gallery"
+                    android:layout_marginEnd="5dp" />
 
                 <ImageView
                     android:id="@+id/gallery_four"
                     android:layout_width="@dimen/list_item_height"
                     android:layout_height="@dimen/list_item_height"
-                    android:layout_marginRight="5dp"
                     android:layout_marginEnd="5dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/facility_gallery" />
 
             </LinearLayout>
 

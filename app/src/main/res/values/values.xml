@@ -3,6 +3,4 @@
     <!-- Height of each list item -->
     <dimen name="list_item_height">150dp</dimen>
 
-    <!-- Width of of each image -->
-    <dimen name="image_width">120dp</dimen>
 </resources>
